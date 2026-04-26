@@ -3,11 +3,14 @@ export default {
           const url = new URL(request.url);
 
               if (url.pathname === "/api/health") {
-                    return new Response(JSON.stringify({ ok: true }), {
-                            headers: { "Content-Type": "application/json" }
-                                  });
-                                      }
+                    return new Response(JSON.stringify({
+                            ok: true,
+                                    msg: "worker running"
+                                          }), {
+                                                  headers: { "Content-Type": "application/json" }
+                                                        });
+                                                            }
 
-                                          return new Response("OK");
-                                            }
-                                            };
+                                                                return new Response("OK");
+                                                                  }
+                                                                  };
